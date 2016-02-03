@@ -10,12 +10,16 @@ import im.delight.android.ddp.MeteorSingleton;
  */
 public class App extends Application {
 
+    //This is your url set ws if not secured yet
+    String url = "wss://meteor-ios-todos.meteor.com/websocket";
+
     @Override
     public void onCreate() {
         super.onCreate();
 
 
-        MeteorSingleton.createInstance(this, "");
+        //we create a Singleton of Meteor instance and use it throughout the app life cycle
+        MeteorSingleton.createInstance(this, url);
 
         //Enable when Debugging and better remove it when deploying
         Meteor.setLoggingEnabled(true);

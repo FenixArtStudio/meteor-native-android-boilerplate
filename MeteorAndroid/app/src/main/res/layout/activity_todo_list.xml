@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="meteor.android.todo.MainActivity">
+    tools:context="meteor.android.todo.TodoListActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,8 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
-
+    <include layout="@layout/content_todo_list" />
 
 
 </android.support.design.widget.CoordinatorLayout>
