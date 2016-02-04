@@ -282,10 +282,10 @@ and you can login like this
    `MeteorSingleton.getInstance().reconnect()`
    
 
-* Handleing dynamic data insertion , change etc, when an activity is subcribed to a publish then data keeps coming and changes happens , we need to handle it properly for that purpose we may use [EventBus](https://github.com/greenrobot/EventBus) see here Full Implementation of [Event Bus Example](https://github.com/inovio/meteor-native-android-boilerplate/blob/master/MeteorAndroid/app/src/main/java/meteor/android/todo/TodoListActivity.java)
+* Handleing dynamic data insertion , change etc, when an activity is subcribed to a publish then data keeps coming and changes happens , we need to handle it properly for that purpose we may use [EventBus](https://github.com/greenrobot/EventBus) see here full Implementation of [Event Bus Example](https://github.com/inovio/meteor-native-android-boilerplate/blob/master/MeteorAndroid/app/src/main/java/meteor/android/todo/TodoListActivity.java)
 
 
-* To create Java object class you may want create your own or use any automation system like [JsonSchema2Pojo](jsonschema2pojo.org) or [JsonExport](https://github.com/Ahmed-Ali/JSONExport)
+* To create Java object class you may want to create your own or use any automation system like [JsonSchema2Pojo](jsonschema2pojo.org) or [JsonExport](https://github.com/Ahmed-Ali/JSONExport)
 
 
 	
