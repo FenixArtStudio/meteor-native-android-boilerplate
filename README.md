@@ -6,11 +6,9 @@ This is Meteor Android-DDP Boilerplate, uses the [Android-DDP](https://github.co
 
 Connect your native Android apps, written in Java, to apps built with the [Meteor](https://www.meteor.com/) framework and build real-time features.
 
-And this boilerplate shows how to manage it/
+And this boilerplate shows the implementation of [Android-DDP](https://github.com/delight-im/Android-DDP/)
 
-
-
-
+You may use your own hosted Meteor app or use [this](http://meteor-native-android-boilerplate.meteor.com/) , [here](https://github.com/inovio/meteor-native-android-boilerplate/tree/master/platform) is the source code.
 
 ## Installation
 
