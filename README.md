@@ -284,7 +284,7 @@ and you can login like this
    `mMeteor.reconnect()`
    
 
-* Handleing dynamic data insertion , change etc, when an activity is subcribed to a publish then data keeps coming and changes happens , we need to handle it properly for that purpose we may use [EventBus](https://github.com/greenrobot/EventBus) see here see Full Implementation here [Event Bus Example](https://github.com/inovio/meteor-native-android-boilerplate/blob/master/MeteorAndroid/app/src/main/java/meteor/android/todo/TodoListActivity.java)
+* Handleing dynamic data insertion , change etc, when an activity is subcribed to a publish then data keeps coming and changes happens , we need to handle it properly for that purpose we may use [EventBus](https://github.com/greenrobot/EventBus) see here Full Implementation of [Event Bus Example](https://github.com/inovio/meteor-native-android-boilerplate/blob/master/MeteorAndroid/app/src/main/java/meteor/android/todo/TodoListActivity.java)
 
 
 
