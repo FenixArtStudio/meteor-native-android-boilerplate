@@ -178,9 +178,9 @@ and you can login like this
    values.put("_id", "my-id");
    values.put("some-key", "some-value");
 
-   mMeteor.insert("my-collection", values);
+   MeteorSingleton.getInstance().insert("my-collection", values);
    // or
-   // mMeteor.insert("my-collection", values, new ResultListener() { });
+   // MeteorSingleton.getInstance().insert("my-collection", values, new ResultListener() { });
    ```
 
  * Updating data in a collection
@@ -192,94 +192,94 @@ and you can login like this
    Map<String, Object> values = new HashMap<String, Object>();
    values.put("some-key", "some-value");
 
-   mMeteor.update("my-collection", query, values);
+   MeteorSingleton.getInstance().update("my-collection", query, values);
    // or
-   // mMeteor.update("my-collection", query, values, options);
+   // MeteorSingleton.getInstance().update("my-collection", query, values, options);
    // or
-   // mMeteor.update("my-collection", query, values, options, new ResultListener() { });
+   // MeteorSingleton.getInstance().update("my-collection", query, values, options, new ResultListener() { });
    ```
 
  * Deleting data from a collection
 
    ```
-   mMeteor.remove("my-collection", "my-id");
+   MeteorSingleton.getInstance().remove("my-collection", "my-id");
    // or
-   // mMeteor.remove("my-collection", "my-id", new ResultListener() { });
+   // MeteorSingleton.getInstance().remove("my-collection", "my-id", new ResultListener() { });
    ```
 
  * Subscribing to data from the server
 
    ```
-   String subscriptionId = mMeteor.subscribe("my-subscription");
+   String subscriptionId = MeteorSingleton.getInstance().subscribe("my-subscription");
    // or
-   // String subscriptionId = mMeteor.subscribe("my-subscription", new Object[] { arg1, arg2 });
+   // String subscriptionId = MeteorSingleton.getInstance().subscribe("my-subscription", new Object[] { arg1, arg2 });
    // or
-   // String subscriptionId = mMeteor.subscribe("my-subscription", new Object[] { arg1, arg2 }, new SubscribeListener() { });
+   // String subscriptionId = MeteorSingleton.getInstance().subscribe("my-subscription", new Object[] { arg1, arg2 }, new SubscribeListener() { });
    ```
 
  * Unsubscribing from a previously established subscription
 
    ```
-   mMeteor.unsubscribe(subscriptionId);
+   MeteorSingleton.getInstance().unsubscribe(subscriptionId);
    // or
-   // mMeteor.unsubscribe(subscriptionId, new UnsubscribeListener() { });
+   // MeteorSingleton.getInstance().unsubscribe(subscriptionId, new UnsubscribeListener() { });
    ```
 
  * Calling a custom method defined on the server
 
    ```
-   mMeteor.call("myMethod");
+   MeteorSingleton.getInstance().call("myMethod");
    // or
-   // mMeteor.call("myMethod", new Object[] { arg1, arg2 });
+   // MeteorSingleton.getInstance().call("myMethod", new Object[] { arg1, arg2 });
    // or
-   // mMeteor.call("myMethod", new ResultListener() { });
+   // MeteorSingleton.getInstance().call("myMethod", new ResultListener() { });
    // or
-   // mMeteor.call("myMethod", new Object[] { arg1, arg2 }, new ResultListener() { });
+   // MeteorSingleton.getInstance().call("myMethod", new Object[] { arg1, arg2 }, new ResultListener() { });
    ```
 
  * Disconnect from the server
 
-   `mMeteor.disconnect()`
+   `MeteorSingleton.getInstance().disconnect()`
 
  * Creating a new account (requires `accounts-password` package)
 
    ```
-   mMeteor.registerAndLogin("john", "john.doe@example.com", "password", new ResultListener() { });
+   MeteorSingleton.getInstance().registerAndLogin("john", "john.doe@example.com", "password", new ResultListener() { });
    // or
-   // mMeteor.registerAndLogin("john", "john.doe@example.com", "password", profile, new ResultListener() { });
+   // MeteorSingleton.getInstance().registerAndLogin("john", "john.doe@example.com", "password", profile, new ResultListener() { });
    ```
 
  * Signing in with an existing username (requires `accounts-password` package)
 
-   `mMeteor.loginWithUsername("john", "password", new ResultListener() { });`
+   `MeteorSingleton.getInstance().loginWithUsername("john", "password", new ResultListener() { });`
 
  * Signing in with an existing email address (requires `accounts-password` package)
 
-   `mMeteor.loginWithEmail("john.doe@example.com", "password", new ResultListener() { });`
+   `MeteorSingleton.getInstance().loginWithEmail("john.doe@example.com", "password", new ResultListener() { });`
 
  * Check if the client is currently logged in (requires `accounts-password` package)
 
-   `mMeteor.isLoggedIn()`
+   `MeteorSingleton.getInstance().isLoggedIn()`
 
  * Get the client's user ID (if currently logged in) (requires `accounts-password` package)
 
-   `mMeteor.getUserId()`
+   `MeteorSingleton.getInstance().getUserId()`
 
  * Logging out (requires `accounts-password` package)
 
    ```
-   mMeteor.logout();
+   MeteorSingleton.getInstance().logout();
    // or
-   // mMeteor.logout(new ResultListener() { });
+   // MeteorSingleton.getInstance().logout(new ResultListener() { });
    ```
 
  * Checking whether the client is connected
 
-   `mMeteor.isConnected()`
+   `MeteorSingleton.getInstance().isConnected()`
 
  * Manually attempt to re-connect (if necessary)
 
-   `mMeteor.reconnect()`
+   `MeteorSingleton.getInstance().reconnect()`
    
 
 * Handleing dynamic data insertion , change etc, when an activity is subcribed to a publish then data keeps coming and changes happens , we need to handle it properly for that purpose we may use [EventBus](https://github.com/greenrobot/EventBus) see here Full Implementation of [Event Bus Example](https://github.com/inovio/meteor-native-android-boilerplate/blob/master/MeteorAndroid/app/src/main/java/meteor/android/todo/TodoListActivity.java)
